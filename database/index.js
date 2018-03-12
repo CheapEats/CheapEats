@@ -52,7 +52,7 @@ cuisineType (string): Optional parameter. If provided, must also provide zip cod
 
 Output: A promse that resolves to an array of all matching cheap items. (Currently not limiting to 25.)
 =========================================================== */
-const getCheapItems = (zip, cuisineType) => {
+const getCheapItems = (zip, cuisineType) => { 
   var query;
   if (zip === undefined && cuisineType === undefined) {
     query = 'SELECT * FROM CheapItems';
@@ -195,7 +195,6 @@ login (string): the username for that owner
 Output: A promise that resolves to an array containing one object with all the information about that owner. 
 =========================================================== */
 const getOwnerByLogin = (login) => {
-
   var query = "SELECT * FROM Owners WHERE login = '" + login + "'";
 
   return new Promise(function(resolve, reject) {
